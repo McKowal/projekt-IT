@@ -32,7 +32,8 @@ def make_plot(name, x):
 
 # @app.route("/")
 
+
 function_name = 'sin(x)'
 point = 4
-plot = make_plot(function_name, point)
-plot.show()
+pl = make_plot(function_name, point)
+pl.savefig("wykresy\\plot.png", format='png')
