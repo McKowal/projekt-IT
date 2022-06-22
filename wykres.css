@@ -4,6 +4,9 @@ h1.title {
     font-size: xx-large;
     text-align: center;
 }
+a.przycisk {
+    text-align: center;
+}
 a.przycisk:link, a.przycisk:visited {
     background-color: white;
     color: black;
@@ -11,8 +14,10 @@ a.przycisk:link, a.przycisk:visited {
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
-    margin-left: 150px;
     font-size: large;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
 }
 
 a.przycisk:hover, a.przycisk:active {
