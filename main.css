@@ -3,7 +3,7 @@ body {
     background-color: #d5aaca;
     margin: 0 15%;
     font-family: "Cinzel", sans-serif;}
-a.dane:link, a.dane:visited {
+a.przycisk:link, a.przycisk:visited {
     background-color: white;
     color: black;
     border: 2px solid #BF7256;
@@ -14,7 +14,7 @@ a.dane:link, a.dane:visited {
     font-size: large;
 }
 
-a.dane:hover, a.dane:active {
+a.przycisk:hover, a.przycisk:active {
     background-color: #BF7256;
     color: white;
 }

@@ -1,0 +1,15 @@
+a.przycisk:link, a.przycisk:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid #BF7256;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 150px;
+    font-size: large;
+}
+
+a.przycisk:hover, a.przycisk:active {
+    background-color: #BF7256;
+    color: white;
+}
