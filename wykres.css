@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+h1.title {
+    font-family: "Cinzel", sans-serif;
+    font-size: xx-large;
+    text-align: center;
+}
 a.przycisk:link, a.przycisk:visited {
     background-color: white;
     color: black;

@@ -3,6 +3,11 @@ body {
     background-color: #d5aaca;
     margin: 0 15%;
     font-family: "Cinzel", sans-serif;}
+h1.title {
+    font-family: "Cinzel", sans-serif;
+    font-size: xx-large;
+    text-align: center;
+}
 a.przycisk:link, a.przycisk:visited {
     background-color: white;
     color: black;
