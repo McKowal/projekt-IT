@@ -1,6 +1,10 @@
-# from flask import Flask
+from flask import Flask
+from flask import render_template
+from flask import request
 import matplotlib.pyplot as plt
 import numpy as np
+import io
+import base64
 from numpy import sin
 
 
@@ -28,12 +32,20 @@ def make_plot(name, x):
     return plt
 
 
-# app = Flask(__name__)
+app = Flask(__name__)
+app.secret_key = "a"
 
-# @app.route("/")
+
+@app.route("/", methods=["POST", "GET"])
+def index():
+    return render_template("index.html")
 
 
-function_name = 'sin(x)'
-point = 4
-pl = make_plot(function_name, point)
-pl.savefig("wykresy\\plot.png", format='png')
+@app.route("/dane", methods=["POST", "GET"])
+def dane():
+    return render_template("dane.html")
+
+
+@app.route("/styczna", methods=["POST", "GET"])
+def tangent_line():
+    return render_template("styczna.html")
