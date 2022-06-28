@@ -7,14 +7,14 @@
     </head>
     <body>
         <h1 class="title">Wyznaczanie stycznej funkcji</h1>
-        <form action="doplot" method="post">
+        <form action="plot" method="post">
             <div>
                 <div>
                     <input type="text" name="function" ><p>Wpisz wzór funkcji:</p>
                     <br>
                     <input type="text" name="point" ><p>Wpisz punkt(współ. x):</p>
                     <br>
-                    <input type="submit" value="RYSUJ" id="doplot">
+                    <input type="submit" value="RYSUJ" id="plot">
                 </div>
             {% if Ploting==True %}
             <div style="display:inline-block;vertical-align:top;"><img src="{{plot}}" alt="styczna w punkcie"></img></div>
