@@ -11,10 +11,11 @@
         <p class="introduction"> Witamy na stronie naszego projektu, który realizowany jest w ramach zajęć z Technologii Informacyjnych. 
             Nasza strona umożliwa użytkownikowi rysowanie stycznej do wykresu funkcji.
         </p>
-        <ul>
-            <li><a href="templates\dane.html" class="dane">Dane kontaktowe autorów</a></li>
-            <br>
-            <li><a href="templates\styczna.html" class="styczna">Wyznaczanie stycznej</a></li>
-        </ul>
+        <form action="dane" method="post">
+            <input type="submit" value="Dane" id="dane">
+        </form>
+        <form action="styczna" method="post"> 
+            <input type="submit" value="styczna" id="styczna">
+        </form>
     </body>
 </html>
