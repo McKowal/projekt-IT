@@ -2,10 +2,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import matplotlib.pyplot as plt
-import numpy as np
 import io
 import base64
-from numpy import sin
+from numpy import *
 
 
 def calculate_slope(function, x):
@@ -19,13 +18,13 @@ def function_value(name, x):
 
 def make_plot(name, x):
     step = 0.001
-    x_range = np.arange(x - 5, x + 5, step)
+    x_range = arange(x - 5, x + 5, step)
     plt.clf()
     plt.plot(x_range, function_value(name, x_range), label=name)
     slope = calculate_slope(name, x)
-    tangent_x_range = np.arange(x - 1, x + 1, step)
+    tangent_x_range = arange(x - 1, x + 1, step)
     plt.plot(tangent_x_range, slope * (tangent_x_range - x) + function_value(name, x),
-             label='{} * x + {}'.format(np.round(slope, 2), np.round(function_value(name, x) - slope * x, 2)))
+             label='{} * x + {}'.format(round(slope, 2), round(function_value(name, x) - slope * x, 2)))
     plt.title(name)
     plt.xlabel('x')
     plt.ylabel('y')
