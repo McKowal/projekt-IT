@@ -9,7 +9,7 @@ h1.title {
     font-size: xx-large;
     text-align: center;
 }
-.plocik:link, .plocik: white;
+.plocik {
     color: black;
     border: 2px solid #BF7256;
     padding: 10px 20px;
