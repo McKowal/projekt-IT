@@ -12,12 +12,13 @@ h1.title {
 
 form.f1 {
     margin: auto;
-    width: 40%;
     padding: 20px;
+    text-align: center;
+
 }
 form.f2 {
     margin: auto;
-    width: 43%;
+    text-align: center;
     padding: 20px;
 }
 
@@ -39,9 +40,7 @@ form.f2 {
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
-    margin-left: 133px;
     font-size: large;
-    width: 30%;
 }
 
 .przycisk1:hover, .przycisk1:active {
@@ -56,7 +55,6 @@ form.f2 {
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
-    margin-left: 150px;
     font-size: large;
 }
 

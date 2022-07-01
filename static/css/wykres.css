@@ -48,8 +48,7 @@ a {
     font-size: large;
     text-align: center;
     cursor: pointer;
-    margin: auto;
-    width: 53%;
+    margin-left: 10%;
 }
 
 .plocik:hover, .plocik:active {
