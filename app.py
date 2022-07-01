@@ -2,9 +2,11 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import matplotlib.pyplot as plt
+import matplotlib
 import io
 import base64
 from numpy import *
+matplotlib.use('Agg')
 
 
 def calculate_slope(function, x):
