@@ -26,7 +26,7 @@ def make_plot(name, x):
     plt.clf()
     value = function_value(name, x_range)
     if len(value) == 0:
-        return False
+        return
     plt.plot(x_range, value, label=name)
     slope = calculate_slope(name, x)
     tangent_x_range = arange(x - 1, x + 1, step)
@@ -36,7 +36,11 @@ def make_plot(name, x):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend()
-    return plt
+    img = io.BytesIO()
+    plt.savefig(img, format='png')
+    img.seek(0)
+    url = base64.b64encode(img.getvalue()).decode()
+    return 'data:image/png;base64,{}'.format(url)
 
 
 app = Flask(__name__)
@@ -60,7 +64,6 @@ def tangent_line():
 
 @app.route("/plot", methods=["POST", "GET"])
 def plot():
-    img = io.BytesIO()
     function = str(request.form['function'])
     try:
         point = float(request.form['point'])
@@ -69,9 +72,5 @@ def plot():
     p = make_plot(function, point)
     if not p:
         return render_template("styczna.html")
-    p.savefig(img, format='png')
-    img.seek(0)
-    url = base64.b64encode(img.getvalue()).decode()
-    p = 'data:image/png;base64,{}'.format(url)
     plotting = True
     return render_template("styczna.html", plot=p, plotting=plotting)
