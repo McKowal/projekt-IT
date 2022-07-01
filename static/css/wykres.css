@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
+body {
+    background-color: #d5aaca;
+    margin: 0 15%;
+    font-family: "Cinzel", sans-serif;
+}
 h1.title {
     font-family: "Cinzel", sans-serif;
     font-size: xx-large;
     text-align: center;
 }
-a.przycisk {
-    text-align: center;
-}
-a.przycisk:link, a.przycisk:visited {
-    background-color: white;
+.plocik:link, .plocik: white;
     color: black;
     border: 2px solid #BF7256;
     padding: 10px 20px;
@@ -20,7 +21,7 @@ a.przycisk:link, a.przycisk:visited {
     margin: auto;
 }
 
-a.przycisk:hover, a.przycisk:active {
+.plocik:hover, .plocik:active {
     background-color: #BF7256;
     color: white;
 }
