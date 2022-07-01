@@ -7,7 +7,20 @@ h1.title {
     font-family: "Cinzel", sans-serif;
     font-size: xx-large;
     text-align: center;
+    padding: 30px;
 }
+
+form.f1 {
+    margin: auto;
+    width: 40%;
+    padding: 20px;
+}
+form.f2 {
+    margin: auto;
+    width: 43%;
+    padding: 20px;
+}
+
 .przycisk {
     background-color: white;
     color: black;
