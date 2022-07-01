@@ -20,6 +20,7 @@ def function_value(name, x):
 def make_plot(name, x):
     step = 0.001
     x_range = np.arange(x - 5, x + 5, step)
+    plt.clf()
     plt.plot(x_range, function_value(name, x_range), label=name)
     slope = calculate_slope(name, x)
     tangent_x_range = np.arange(x - 1, x + 1, step)
