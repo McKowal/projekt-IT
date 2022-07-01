@@ -13,7 +13,21 @@ h1.title {
 .zrodlo {
     text-align: center;
 }
+.col1 {
+    float: left;
+    width: 33%;
+    padding-top: 100px;
+  }
 
+.col2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.wykres {
+    padding: 50px;
+}
 a {
     display: block;
 }
@@ -35,6 +49,7 @@ a {
     text-align: center;
     cursor: pointer;
     margin: auto;
+    width: 53%;
 }
 
 .plocik:hover, .plocik:active {

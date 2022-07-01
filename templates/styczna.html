@@ -18,17 +18,19 @@
             <a href="https://pre-epodreczniki.open.agh.edu.pl/tiki-index.php?page=Pochodna+funkcji+a+styczna+do+wykresu+funkcji">Źródło</a>
         </div>
         <form action="plot" method="post">
-            <div>
-                <div>
+            <div class="wykres">
+                <div class="col1">
                     <input type="text" name="function" ><p>Wpisz wzór funkcji:</p>
                     <br>
                     <input type="text" name="point" ><p>Wpisz punkt(współ. x):</p>
                     <br>
                     <input type="submit" value="RYSUJ" id="plot" class="plocik">
                 </div>
-            {% if plotting==True %}
-            <div style="display:inline-block;vertical-align:top;"><img src="{{plot}}" alt="styczna w punkcie"></img></div>
-            {% endif %}
+                <div class="col2">
+                    {% if plotting==True %}
+                    <img src="{{plot}}" alt="styczna w punkcie" class="wykres_img"></img>
+                    {% endif %}
+                </div>
             </div>
         </form>       
         
