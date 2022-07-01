@@ -9,6 +9,17 @@ h1.title {
     font-size: xx-large;
     text-align: center;
 }
+
+a {
+    text-align: center;
+}
+
+.obr_zr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 .plocik {
     color: black;
     border: 2px solid #BF7256;
