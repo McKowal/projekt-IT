@@ -16,8 +16,8 @@ def function_value(name, x):
     try:
         name = eval(name)
     except NameError:
-        return False
-    return eval(name)
+        return []
+    return name
 
 
 def make_plot(name, x):
@@ -25,7 +25,7 @@ def make_plot(name, x):
     x_range = arange(x - 5, x + 5, step)
     plt.clf()
     value = function_value(name, x_range)
-    if not value:
+    if len(value) == 0:
         return False
     plt.plot(x_range, value, label=name)
     slope = calculate_slope(name, x)
