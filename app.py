@@ -49,3 +49,17 @@ def dane():
 @app.route("/styczna", methods=["POST", "GET"])
 def tangent_line():
     return render_template("styczna.html")
+
+
+@app.route("/plot", methods=["POST", "GET"])
+def plot():
+    img = io.BytesIO()
+    function = str(request.form['function'])
+    point = float(request.form['point'])
+    p = make_plot(function, point)
+    p.savefig(img, format='png')
+    img.seek(0)
+    url = base64.b64encode(img.getvalue()).decode()
+    p = 'data:image/png;base64,{}'.format(url)
+    plotting = True
+    return render_template("styczna.html", plot=p, plotting=plotting)
