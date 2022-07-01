@@ -13,6 +13,10 @@ def calculate_slope(function, x):
 
 
 def function_value(name, x):
+    try:
+        name = eval(name)
+    except NameError:
+        return False
     return eval(name)
 
 
@@ -20,7 +24,10 @@ def make_plot(name, x):
     step = 0.001
     x_range = arange(x - 5, x + 5, step)
     plt.clf()
-    plt.plot(x_range, function_value(name, x_range), label=name)
+    value = function_value(name, x_range)
+    if not value:
+        return False
+    plt.plot(x_range, value, label=name)
     slope = calculate_slope(name, x)
     tangent_x_range = arange(x - 1, x + 1, step)
     plt.plot(tangent_x_range, slope * (tangent_x_range - x) + function_value(name, x),
@@ -55,8 +62,13 @@ def tangent_line():
 def plot():
     img = io.BytesIO()
     function = str(request.form['function'])
-    point = float(request.form['point'])
+    try:
+        point = float(request.form['point'])
+    except ValueError:
+        return render_template("styczna.html")
     p = make_plot(function, point)
+    if not p:
+        return render_template("styczna.html")
     p.savefig(img, format='png')
     img.seek(0)
     url = base64.b64encode(img.getvalue()).decode()
